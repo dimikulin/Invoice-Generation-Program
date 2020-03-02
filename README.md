@@ -8,10 +8,7 @@ Program ma na celu pomóc w zarządzaniu fakturami Firmy. Główne funkcje progr
 Dane wprowadzanych produktów,firm i faktur są walidowane.
 
 Wybrane screeny z programu:
-
-
-![Dodanie klienta](https://user-images.githubusercontent.com/45290627/75018774-fc68bb00-548f-11ea-8649-a47c13843234.png)
-![ListaKlientow](https://user-images.githubusercontent.com/45290627/75018935-4651a100-5490-11ea-9188-458a63679aa0.png)
-![wystawianieFaktur](https://user-images.githubusercontent.com/45290627/75018945-494c9180-5490-11ea-9899-55cc74eb15f2.png)
-![ListaFaktur](https://user-images.githubusercontent.com/45290627/75018927-42be1a00-5490-11ea-8745-2e3f58438680.png)
-![pdf](https://user-images.githubusercontent.com/45290627/75018940-481b6480-5490-11ea-88e4-85873f139ff6.png)
+![2](https://user-images.githubusercontent.com/45290627/75723474-b22bd900-5cdc-11ea-9b58-65db5f91aa8c.JPG)
+![1](https://user-images.githubusercontent.com/45290627/75723476-b526c980-5cdc-11ea-989d-8d78eaec50a5.JPG)
+![3](https://user-images.githubusercontent.com/45290627/75723483-b657f680-5cdc-11ea-81e8-925f2a33ca14.JPG)
+![4](https://user-images.githubusercontent.com/45290627/75723485-b821ba00-5cdc-11ea-92c2-874fdb678756.JPG)
