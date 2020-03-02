@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="itextpdf">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/itextpdf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jaxb-api-2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/sqlite.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
