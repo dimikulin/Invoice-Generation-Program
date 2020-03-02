@@ -1,5 +1,17 @@
-# ProgramFakturyPDF1
-Program służący do wystawiania faktur. Dzięki niemu możemy dodawać dane dotyczące produktów oraz klientów do naszej bazy danych i na ich podstawie wystawiać faktury w formacie .pdf
-Aplikację możemy uruchomić na 2 sposoby:
-1. Uruchamiając w programie np. IntellIJ.
-2. Sciągając go ze strony https://drive.google.com/file/d/1iJjge-rHZ1ZvKYNRJiBySfksS54ae1El/view. Po rozpakowaniu należy uruchomić plik JavaFXApp.exe
+# Opis Programu
+
+Program ma na celu pomóc w zarządzaniu fakturami Firmy. Główne funkcje programu:
+* dodawanie/edycja/wyświetlanie produktów (nazwa, cena, stawka vat),
+* dodawanie/edycja/wyświetlanie klientów (dane firmy m.in. nazwa,NIP,adres,telefon),
+* edycja własnych danych,
+* dodawanie/edycja/wyświetlanie/usuwanie/generowanie pdf faktur firmy
+Dane wprowadzanych produktów,firm i faktur są walidowane.
+
+Wybrane screeny z programu:
+
+
+![Dodanie klienta](https://user-images.githubusercontent.com/45290627/75018774-fc68bb00-548f-11ea-8649-a47c13843234.png)
+![ListaKlientow](https://user-images.githubusercontent.com/45290627/75018935-4651a100-5490-11ea-9188-458a63679aa0.png)
+![wystawianieFaktur](https://user-images.githubusercontent.com/45290627/75018945-494c9180-5490-11ea-9899-55cc74eb15f2.png)
+![ListaFaktur](https://user-images.githubusercontent.com/45290627/75018927-42be1a00-5490-11ea-8745-2e3f58438680.png)
+![pdf](https://user-images.githubusercontent.com/45290627/75018940-481b6480-5490-11ea-88e4-85873f139ff6.png)
