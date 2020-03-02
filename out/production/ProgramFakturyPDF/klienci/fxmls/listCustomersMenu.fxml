@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="klienci.controllers.ListCustomersMenu" fx:id="listCustomersMenu">
+    <top>
+        <Label text="Klienci" BorderPane.alignment="center"/>
+    </top>
+    <center>
+        <VBox alignment="center" spacing="10">
+            <children>
+                <TableView fx:id="tableCustomers" >
+                    <columns>
+                        <TableColumn fx:id="idCustomerTable" text="Id"  prefWidth="${tableCustomers.width*0.05}"/>
+                        <TableColumn fx:id="nameCompanyTable" text="Nazwa" onEditCommit="#editNameCompanyOfTable" prefWidth="${tableCustomers.width*0.2}"/>
+                        <TableColumn fx:id="nipTable" text="NIP" onEditCommit="#editNipOfTable" prefWidth="${tableCustomers.width*0.2}"/>
+                        <TableColumn fx:id="streetTable" text="Ulica" onEditCommit="#editStreetOfTable" prefWidth="${tableCustomers.width*0.1}"/>
+                        <TableColumn fx:id="numberOfStreetTable" text="Numer" onEditCommit="#editNumberStreetOfTable" prefWidth="${tableCustomers.width*0.05}"/>
+                        <TableColumn fx:id="zipCodeTable" text="Kod pocztowy" onEditCommit="#editZipCodeOfTable" prefWidth="${tableCustomers.width*0.1}"/>
+                        <TableColumn fx:id="townTable" text="Miasto" onEditCommit="#editTownOfTable" prefWidth="${tableCustomers.width*0.2}"/>
+                        <TableColumn fx:id="mobilePhoneTable" text="Telefon" onEditCommit="#editMobilePhoneOfTable" prefWidth="${tableCustomers.width*0.1}"/>
+                    </columns>
+                </TableView>
+                <Label fx:id="info"/>
+                <Button text="Zapisz wprowadzone zmiany" onAction="#saveCustomers" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/edit.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button text="Wstecz" prefWidth="150" onAction="#returnToCustomersMenu" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/return.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </VBox>
+    </center>
+    <bottom>
+        <Label text="Copyright by Mateusz Mikuła 2020" BorderPane.alignment="center"/>
+    </bottom>
+</BorderPane>

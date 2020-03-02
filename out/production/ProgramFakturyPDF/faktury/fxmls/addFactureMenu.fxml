@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="faktury.controllers.AddFactureMenu" fx:id="addFactureMenu">
+    <top>
+        <Label text="Wystaw Fakturę" BorderPane.alignment="center"/>
+    </top>
+    <center>
+        <VBox alignment="center" spacing="10">
+            <children>
+                <GridPane alignment="center" vgap="10" hgap="10">
+                        <Label text="ID Firmy" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <TextField GridPane.rowIndex="0" GridPane.columnIndex="1" fx:id="idCompany" onKeyReleased="#stateAddFactureButton"/>
+                        <Label text="Data wystawienia" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                        <DatePicker GridPane.rowIndex="0" GridPane.columnIndex="3" fx:id="date"/>
+                        <Label text="ID Produktu" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextField GridPane.rowIndex="1" GridPane.columnIndex="1" fx:id="idProduct" onKeyReleased="#stateAddProductButton"/>
+                        <Label text="Ilość" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                        <TextField GridPane.rowIndex="1" GridPane.columnIndex="3" fx:id="amount" onKeyReleased="#stateAddProductButton"/>
+                        <Button GridPane.rowIndex="1" GridPane.columnIndex="4" text="Dodaj Produkt" prefWidth="150" onAction="#addProduct" fx:id="addProduct" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                            <graphic>
+                                <ImageView>
+                                    <Image url="@Icons/addProduct.png"/>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                </GridPane>
+                <Button text="Usuń zaznaczony wiersz" onAction="#deleteSelectedRow" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/deleteSelectedProduct.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <TableView fx:id="tableProducts">
+                    <columns>
+                        <TableColumn fx:id="idProductTable" onEditCommit="#editIdProductofTable" text="ID Produktu" prefWidth="${tableProducts.width*0.5}"/>
+                        <TableColumn fx:id="amountProduct" text="Ilość" onEditCommit="#editAmountProductofTable" prefWidth="${tableProducts.width*0.5}"/>
+                    </columns>
+                </TableView>
+                <Label fx:id="labelInfo"/>
+                <Button text="Wystaw Fakturę" prefWidth="150" onAction="#addFacture" fx:id="addFacture" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/addFacture.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button text="Wstecz" prefWidth="150" onAction="#returnToFacturesMenu" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/return.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </VBox>
+    </center>
+    <bottom>
+        <Label text="Copyright by Mateusz Mikuła 2020" BorderPane.alignment="center"/>
+    </bottom>
+</BorderPane>

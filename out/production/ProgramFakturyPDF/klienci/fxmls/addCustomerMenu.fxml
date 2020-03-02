@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="klienci.controllers.AddCustomerMenu" fx:id="addCustomerMenu">
+    <top>
+        <Label text="Dodaj Klienta" BorderPane.alignment="center"/>
+    </top>
+    <center>
+        <GridPane alignment="center" vgap="10" hgap="10">
+            <Label GridPane.rowIndex="0" GridPane.columnIndex="0" text="Nazwa Firmy"/>
+            <TextField GridPane.rowIndex="0" GridPane.columnIndex="1" fx:id="nameCompany" onKeyReleased="#stateAddCustomerButton"/>
+            <Label GridPane.rowIndex="1" GridPane.columnIndex="0" text="NIP"/>
+            <TextField GridPane.rowIndex="1" GridPane.columnIndex="1" fx:id="nip" onKeyReleased="#stateAddCustomerButton" promptText="XXX-XXX-XX-XX"/>
+            <Label GridPane.rowIndex="2" GridPane.columnIndex="0" text="Ulica"/>
+            <TextField GridPane.rowIndex="2" GridPane.columnIndex="1" fx:id="streetCompany" onKeyReleased="#stateAddCustomerButton"/>
+            <Label GridPane.rowIndex="3" GridPane.columnIndex="0" text="Numer budynku/mieszkania" />
+            <TextField GridPane.rowIndex="3" GridPane.columnIndex="1" fx:id="numberOfStreetCompany" onKeyReleased="#stateAddCustomerButton" />
+            <Label GridPane.rowIndex="4" GridPane.columnIndex="0" text="Kod pocztowy" />
+            <TextField GridPane.rowIndex="4" GridPane.columnIndex="1" fx:id="zipCode" onKeyReleased="#stateAddCustomerButton" promptText="XX-XXX"/>
+            <Label GridPane.rowIndex="5" GridPane.columnIndex="0" text="Miejscowość"/>
+            <TextField GridPane.rowIndex="5" GridPane.columnIndex="1" fx:id="town" onKeyReleased="#stateAddCustomerButton"/>
+            <Label GridPane.rowIndex="6" GridPane.columnIndex="0" text="Numer telefonu"/>
+            <TextField GridPane.rowIndex="6" GridPane.columnIndex="1" fx:id="mobilePhone" onKeyReleased="#stateAddCustomerButton" promptText="np.123456789"/>
+            <VBox GridPane.rowIndex="7" GridPane.columnIndex="0"  GridPane.columnSpan="2" alignment="center" spacing="10">
+                <Label fx:id="labelInfo"/>
+                <Button text="Dodaj" prefWidth="150" fx:id="addCustomerButton" onAction="#checkData" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/addCustomer.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button text="Wstecz" prefWidth="150" onAction="#backToCustomerMenu" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/return.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </VBox>
+
+        </GridPane>
+    </center>
+    <bottom>
+        <Label text="Copyright by Mateusz Mikuła 2020" BorderPane.alignment="center"/>
+    </bottom>
+
+</BorderPane>

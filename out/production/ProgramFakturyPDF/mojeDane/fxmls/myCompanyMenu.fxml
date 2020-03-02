@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="mojeDane.controllers.MyCompanyMenu" fx:id="myCompanyMenu">
+    <top>
+        <Label text="Dane mojej Firmy" BorderPane.alignment="center"/>
+    </top>
+    <center>
+        <GridPane alignment="center" vgap="10" hgap="10">
+            <Label GridPane.rowIndex="0" GridPane.columnIndex="0" text="Nazwa Firmy"/>
+            <TextField GridPane.rowIndex="0" GridPane.columnIndex="1" fx:id="nameCompany" onKeyReleased="#stateEditMyCompanyButton"/>
+            <Label GridPane.rowIndex="1" GridPane.columnIndex="0" text="NIP"/>
+            <TextField GridPane.rowIndex="1" GridPane.columnIndex="1" fx:id="nip" onKeyReleased="#stateEditMyCompanyButton" promptText="XXX-XXX-XX-XX"/>
+            <Label GridPane.rowIndex="2" GridPane.columnIndex="0" text="Ulica"/>
+            <TextField GridPane.rowIndex="2" GridPane.columnIndex="1" fx:id="streetCompany" onKeyReleased="#stateEditMyCompanyButton"/>
+            <Label GridPane.rowIndex="3" GridPane.columnIndex="0" text="Numer budynku/mieszkania" />
+            <TextField GridPane.rowIndex="3" GridPane.columnIndex="1" fx:id="numberOfStreetCompany" onKeyReleased="#stateEditMyCompanyButton" />
+            <Label GridPane.rowIndex="4" GridPane.columnIndex="0" text="Kod pocztowy" />
+            <TextField GridPane.rowIndex="4" GridPane.columnIndex="1" fx:id="zipCode" onKeyReleased="#stateEditMyCompanyButton" promptText="XX-XXX"/>
+            <Label GridPane.rowIndex="5" GridPane.columnIndex="0" text="Miejscowość"/>
+            <TextField GridPane.rowIndex="5" GridPane.columnIndex="1" fx:id="town" onKeyReleased="#stateEditMyCompanyButton"/>
+            <Label GridPane.rowIndex="6" GridPane.columnIndex="0" text="Numer telefonu"/>
+            <TextField GridPane.rowIndex="6" GridPane.columnIndex="1" fx:id="mobilePhone" onKeyReleased="#stateEditMyCompanyButton" promptText="np.123456789"/>
+            <VBox GridPane.rowIndex="7" GridPane.columnIndex="0"  GridPane.columnSpan="2" alignment="center" spacing="10">
+                <Label fx:id="labelInfo"/>
+                <Button text="Edytuj" prefWidth="150" fx:id="editMyCompanyButton" onAction="#checkDate" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/edit.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button text="Wstecz" prefWidth="150" onAction="#backToMenu" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/return.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </VBox>
+
+        </GridPane>
+    </center>
+    <bottom>
+        <Label text="Copyright by Mateusz Mikuła 2020" BorderPane.alignment="center"/>
+    </bottom>
+</BorderPane>

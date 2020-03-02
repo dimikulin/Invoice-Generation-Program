@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="faktury.controllers.Facturesmenu" fx:id="facturesMenu">
+    <top>
+        <Label text="Faktury" BorderPane.alignment="center"/>
+    </top>
+    <center>
+        <VBox alignment="center" spacing="10">
+            <children>
+                <Button text="Wyświetl Faktury" prefWidth="150" onAction="#showFactures" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/listFacture.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button text="Wystaw Fakturę" prefWidth="150" onAction="#addFactureMenu" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/facture.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button text="Wstecz" prefWidth="150" onAction="#returnToMain" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/return.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </VBox>
+    </center>
+    <bottom>
+        <Label text="Copyright by Mateusz Mikuła 2020" BorderPane.alignment="center"/>
+    </bottom>
+</BorderPane>

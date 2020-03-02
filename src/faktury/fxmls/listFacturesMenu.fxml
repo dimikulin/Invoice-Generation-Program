@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.shape.Box?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="faktury.controllers.ListFacturesMenu" fx:id="listFacturesMenu">
+    <top>
+        <Label text="Faktury" BorderPane.alignment="center"/>
+    </top>
+    <center>
+        <VBox alignment="center" spacing="10">
+            <children>
+                <TableView fx:id="tableFactures" >
+                    <columns>
+                        <TableColumn fx:id="idFactureTable" text="Id faktury"  prefWidth="${tableFactures.width*0.1}"/>
+                        <TableColumn fx:id="nameCompanyTable" text="Nazwa Firmy"  prefWidth="${tableFactures.width*0.5}"/>
+                        <TableColumn fx:id="dateTable" text="Data wystawienia" prefWidth="${tableFactures.width*0.2}"/>
+                        <TableColumn fx:id="priceNetTable" text="Cena netto"  prefWidth="${tableFactures.width*0.1}"/>
+                        <TableColumn fx:id="priceGrossTable" text="Cena brutto"  prefWidth="${tableFactures.width*0.1}"/>
+                    </columns>
+                </TableView>
+                <GridPane alignment="center" vgap="10" hgap="10">
+                    <Label text="Podaj id faktury, którą chcesz wygenerować jako PDF" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <TextField fx:id="idCreateFacture" onKeyReleased="#stateCreateFactureButton" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                    <Button text="Generuj PDF" prefWidth="150" onAction="#createFacturePDF" fx:id="createFactureButton" GridPane.rowIndex="0" GridPane.columnIndex="2" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                        <graphic>
+                            <ImageView>
+                                <Image url="@Icons/pdf.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Label text="Podaj id faktury, którą chcesz edytować:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <TextField fx:id="idEditFacture" onKeyReleased="#stateEditFactureButton" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                    <Button text="Edytuj fakturę" prefWidth="150" onAction="#editFacture" fx:id="editFactureButton" GridPane.rowIndex="1" GridPane.columnIndex="2" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                        <graphic>
+                            <ImageView>
+                                <Image url="@Icons/editfacture.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                    <Label text="Podaj id faktury, którą chcesz usunąć:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <TextField fx:id="idDeleteFacture" onKeyReleased="#stateDeleteFactureButton" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                    <Button text="Usuń fakturę" prefWidth="150" onAction="#deleteFacture" fx:id="deleteFactureButton" GridPane.rowIndex="2" GridPane.columnIndex="2" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                        <graphic>
+                            <ImageView>
+                                <Image url="@Icons/deleteSelectedProduct.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </GridPane>
+                <Label fx:id="labelInfo"/>
+                <Button text="Wstecz" prefWidth="150" onAction="#returnToFacturesMenu" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/return.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </VBox>
+    </center>
+    <bottom>
+        <Label text="Copyright by Mateusz Mikuła 2020" BorderPane.alignment="center"/>
+    </bottom>
+
+</BorderPane>

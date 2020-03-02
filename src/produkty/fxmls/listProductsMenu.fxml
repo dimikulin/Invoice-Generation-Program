@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="produkty.controllers.ListProductsMenu" fx:id="listProductsMenu">
+    <top>
+        <Label text="Produkty w firmie" BorderPane.alignment="center"/>
+    </top>
+    <center>
+        <VBox alignment="center" spacing="10">
+            <children>
+                <TableView fx:id="tableProducts" >
+                    <columns>
+                        <TableColumn fx:id="idProductTable" text="Id"  prefWidth="${tableProducts.width*0.1}"/>
+                        <TableColumn fx:id="nameProductTable" text="Nazwa" onEditCommit="#editNameProductOfTable" prefWidth="${tableProducts.width*0.5}"/>
+                        <TableColumn fx:id="priceNet" text="Cena netto(zł)" onEditCommit="#editPriceNetOfTable" prefWidth="${tableProducts.width*0.2}"/>
+                        <TableColumn fx:id="vat" text="VAT(%)" onEditCommit="#editVatOfTable" prefWidth="${tableProducts.width*0.2}"/>
+                    </columns>
+                </TableView>
+                <Label fx:id="info"/>
+                <Button text="Zapisz wprowadzone zmiany" onAction="#saveProducts" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/editProduct.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button text="Wstecz" prefWidth="150" onAction="#returnToProductsMenu" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/returnProduct.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </VBox>
+    </center>
+    <bottom>
+        <Label text="Copyright by Mateusz Mikuła 2020" BorderPane.alignment="center"/>
+    </bottom>
+</BorderPane>

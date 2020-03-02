@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainmenu" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainMenu.Controller">
+    <center>
+        <VBox alignment="center" spacing="10">
+            <children>
+                <Button onAction="#loadFactures" prefWidth="150" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );" text="Faktury">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/invoice.png" />
+                        </ImageView>
+                    </graphic>
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+                <Button onAction="#loadCustomers" prefWidth="150" text="Klienci" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/customers.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button onAction="#loadProducts" prefWidth="150" text="Produkty" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/products.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button onAction="#loadMyCompany" prefWidth="150" text="Moja Firma" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/settings.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button onAction="#loadExitProgram" prefWidth="150" text="Wyjdź" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/exit.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </VBox>
+    </center>
+    <bottom>
+        <Label text="Copyright by Mateusz Mikuła 2020" BorderPane.alignment="center" />
+    </bottom>
+</BorderPane>

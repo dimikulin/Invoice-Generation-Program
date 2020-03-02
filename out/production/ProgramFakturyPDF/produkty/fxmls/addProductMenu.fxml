@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="produkty.controllers.AddProductMenu" fx:id="addProductMenu">
+    <top>
+        <Label text="Dodaj Produkt" BorderPane.alignment="center"/>
+    </top>
+    <center>
+        <GridPane alignment="center" vgap="10" hgap="10">
+            <Label GridPane.rowIndex="0" GridPane.columnIndex="0" text="Nazwa Produktu"/>
+            <TextField GridPane.rowIndex="0" GridPane.columnIndex="1" fx:id="nameProduct" onKeyReleased="#stateAddProductButton"/>
+            <Label GridPane.rowIndex="1" GridPane.columnIndex="0" text="Cena netto"/>
+            <TextField GridPane.rowIndex="1" GridPane.columnIndex="1" fx:id="netPrice" onKeyReleased="#stateAddProductButton" />
+            <Label GridPane.rowIndex="2" GridPane.columnIndex="0" text="VAT[%]"/>
+            <TextField GridPane.rowIndex="2" GridPane.columnIndex="1" fx:id="vat" onKeyReleased="#stateAddProductButton"/>
+            <VBox GridPane.rowIndex="3" GridPane.columnIndex="0"  GridPane.columnSpan="2" alignment="center" spacing="10">
+                <Label fx:id="labelInfo"/>
+                <Button text="Dodaj" prefWidth="150" fx:id="addProductButton" onAction="#checkData" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/addProduct.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button text="Wstecz" prefWidth="150" onAction="#backToProductMenu" style="-fx-background-radius: 30; -fx-background-insets: 0,1,1; -fx-text-fill: black; -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@Icons/returnProduct.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </VBox>
+
+        </GridPane>
+    </center>
+    <bottom>
+        <Label text="Copyright by Mateusz Mikuła 2020" BorderPane.alignment="center"/>
+    </bottom>
+</BorderPane>
