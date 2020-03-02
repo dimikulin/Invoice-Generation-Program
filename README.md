@@ -7,6 +7,10 @@ Program ma na celu pomóc w zarządzaniu fakturami Firmy. Główne funkcje progr
 * dodawanie/edycja/wyświetlanie/usuwanie/generowanie pdf faktur firmy
 Dane wprowadzanych produktów,firm i faktur są walidowane.
 
+Uruchomić program można na 2 sposoby:
+* ściągając project przez np. IntellIJ i stamtąd uruchomienie aplikacji,
+* ściągając spakowaną aplikację poprzez link https://drive.google.com/file/d/1iJjge-rHZ1ZvKYNRJiBySfksS54ae1El/view. Po rozpakowaniu należy uruchomić plik JavaFXApp.exe
+
 Wybrane screeny z programu:
 ![2](https://user-images.githubusercontent.com/45290627/75723474-b22bd900-5cdc-11ea-9b58-65db5f91aa8c.JPG)
 ![5](https://user-images.githubusercontent.com/45290627/75723662-01720980-5cdd-11ea-852c-512137f879b3.JPG)
