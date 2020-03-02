@@ -5,6 +5,7 @@ Program ma na celu pomóc w zarządzaniu fakturami firmy. Główne funkcje progr
 * dodawanie/edycja/wyświetlanie klientów (dane firmy m.in. nazwa,NIP,adres,telefon),
 * edycja własnych danych,
 * dodawanie/edycja/wyświetlanie/usuwanie/generowanie pdf faktur firmy
+
 Dane wprowadzanych produktów,firm i faktur są walidowane.
 
 Uruchomić program można na 2 sposoby:
