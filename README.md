@@ -1,6 +1,6 @@
 # Opis Programu
 
-Program ma na celu pomóc w zarządzaniu fakturami Firmy. Główne funkcje programu:
+Program ma na celu pomóc w zarządzaniu fakturami firmy. Główne funkcje programu:
 * dodawanie/edycja/wyświetlanie produktów (nazwa, cena, stawka vat),
 * dodawanie/edycja/wyświetlanie klientów (dane firmy m.in. nazwa,NIP,adres,telefon),
 * edycja własnych danych,
