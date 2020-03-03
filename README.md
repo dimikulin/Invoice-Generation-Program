@@ -1,6 +1,6 @@
 # Invoice Program
 
-Simple invoice program created with JavaFX
+Simple invoice management program created with JavaFX.
 
 ## Description
 
